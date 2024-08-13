@@ -12,3 +12,13 @@ Below we can clearly see the difference in the count of the classes, this is an 
 There is a huge difference between the ones who have claimed (1) against the people who haven't claimed their insurance (0).
 
 If this data is directly used to train the model, the predictions it will make will be biased. So, challenges like these needs to be addressed before building the model.
+
+## A heatmap to see the correlation:
+
+To understand the relationship between the target class (claim_stauts) and independent features, we need to know how do they correlate. So, let's plot a heatmap that will show their relationship to better understand them.
+![alt text](image-1.png)
+
+It seems, subscription_length, vechicle_age, customer_age,and region_density are only correlated with the
+claim_status. 
+
+Let's see these features and try to understand their distribution.
