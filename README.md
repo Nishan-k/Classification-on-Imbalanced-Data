@@ -35,3 +35,18 @@ In the segment distribution, there are few categories, with 'B2' segment being t
 In the fuel type, petrol is the one with highest count compared to CNG(Compressed Natural Gas) and Diesel.
 
 #### By now we have completed our EDA (Expolratory Data Analysis), now we will start handling the class imbalance problem.
+
+
+## Handling Class Imbalance:
+
+One of the ways to handle the class imbalance is to oversample the minority class i.e. we increase these minority
+class such that it will matchup the counts of the majority class.
+
+For this, we will use resample method from sklearn.utils
+
+```python
+from sklearn.utils import resample
+```
+
+After resampling, now we will have a balanced dataset where the sample size of the labels 1 and 0 will be the same as below:
+![alt text](image-6.png)
