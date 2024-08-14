@@ -21,4 +21,17 @@ To understand the relationship between the target class (claim_stauts) and indep
 It seems, subscription_length, vechicle_age, customer_age,and region_density are only correlated with the
 claim_status. 
 
+## Distribution of numerical data:
 Let's see these features and try to understand their distribution.
+![alt text](image-2.png)
+
+
+## Distribution of categorical data:
+![alt text](image-3.png)
+There are wide varieties of region_code, but 'C8' seems to be the one which is dominant followed by 'C2', 'C5', and 'C3'.
+![alt text](image-4.png)
+In the segment distribution, there are few categories, with 'B2' segment being the most common, followed by 'A', and 'C2'.
+![alt text](image-5.png)
+In the fuel type, petrol is the one with highest count compared to CNG(Compressed Natural Gas) and Diesel.
+
+#### By now we have completed our EDA (Expolratory Data Analysis), now we will start handling the class imbalance problem.
