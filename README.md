@@ -48,5 +48,8 @@ For this, we will use resample method from sklearn.utils
 from sklearn.utils import resample
 ```
 
-After resampling, now we will have a balanced dataset where the sample size of the labels 1 and 0 will be the same as below:
+After oversampling, now we will have a balanced dataset where the sample size of the labels 1 and 0 will be the same as below:
 ![alt text](image-6.png)
+
+Before oversampling we had:
+![alt text](image-7.png)
