@@ -65,3 +65,21 @@ The visualization of the distribution looks good and the data does seems like th
 
 ## 6. Feature Selection:
 Now, since the label counts are matched and there is no any domination, we will now extract the features that are relevant to the target class i.e. claim_status and then build a model on those features.
+
+Here we will be using Random Forest's feature_importances_ method to pull out top 10 features that is most relevant to the target class and later use them to build the model.
+
+But our data is composed of different data types and one of them is object which means text or string and we cannot feed it directly to the model. It needs to be enocded in some numerical form. So, first we will be encoding text into numerical form. And same needs to be done to the integer or float columns because the values are quite different in magnitude because column with high magnitude will dominate the other columns whose value is small.
+
+
+**Although we will be building Random Forest which is a tree based model and can handle data of different scales, its better to scale them.**
+
+After training the Random Forest on the encoded data and using its feature_importances_ attribute, below are the top 10 features that now we will be using to build our main model.
+
+![alt text](image-10.png)
+
+These variables seem to have the greatest impact on the probability of an insurance claim. However, it's worth noting that the policy_id variable shows unusually high importance, which may not be logically connected to the prediction outcome. Therefore, we should ensure that the policy_id column is excluded during model training.
+
+
+
+
+
