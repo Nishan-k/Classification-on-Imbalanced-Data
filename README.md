@@ -5,7 +5,7 @@ In real-world, when performing classification, the situation of having a imbalan
 
 The data is about an insurance claim frequency prediction. In total, there are 58,5892 samples and 41 features.
 
-## Count difference in class:
+## 1. Count difference in class:
 Below we can clearly see the difference in the count of the classes, this is an example of Imbalanced data:
 ![alt text](image.png)
 
@@ -13,7 +13,7 @@ There is a huge difference between the ones who have claimed (1) against the peo
 
 If this data is directly used to train the model, the predictions it will make will be biased. So, challenges like these needs to be addressed before building the model.
 
-## A heatmap to see the correlation:
+## 2. A heatmap to see the correlation:
 
 To understand the relationship between the target class (claim_stauts) and independent features, we need to know how do they correlate. So, let's plot a heatmap that will show their relationship to better understand them.
 ![alt text](image-1.png)
@@ -21,12 +21,12 @@ To understand the relationship between the target class (claim_stauts) and indep
 It seems, subscription_length, vechicle_age, customer_age,and region_density are only correlated with the
 claim_status. 
 
-## Distribution of numerical data:
+## 3. Distribution of numerical data:
 Let's see these features and try to understand their distribution.
 ![alt text](image-2.png)
 
 
-## Distribution of categorical data:
+## 4. Distribution of categorical data:
 ![alt text](image-3.png)
 There are wide varieties of region_code, but 'C8' seems to be the one which is dominant followed by 'C2', 'C5', and 'C3'.
 ![alt text](image-4.png)
@@ -37,7 +37,7 @@ In the fuel type, petrol is the one with highest count compared to CNG(Compresse
 #### By now we have completed our EDA (Expolratory Data Analysis), now we will start handling the class imbalance problem.
 
 
-## Handling Class Imbalance:
+## 5. Handling Class Imbalance:
 
 One of the ways to handle the class imbalance is to oversample the minority class i.e. we increase these minority
 class such that it will matchup the counts of the majority class.
@@ -53,3 +53,15 @@ After oversampling, now we will have a balanced dataset where the sample size of
 
 Before oversampling we had:
 ![alt text](image-7.png)
+
+
+Now, the sample size for both the labels matches each other.
+
+Let's visualize important features of this new over-sampled data . Let's plot the distribution of those 4 features that we did earlier:
+
+![alt text](image-8.png)
+
+The visualization of the distribution looks good and the data does seems like the original ones although we had oversampled them.
+
+## 6. Feature Selection:
+Now, since the label counts are matched and there is no any domination, we will now extract the features that are relevant to the target class i.e. claim_status and then build a model on those features.
