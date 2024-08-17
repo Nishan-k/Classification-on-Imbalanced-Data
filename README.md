@@ -82,7 +82,7 @@ These variables seem to have the greatest impact on the probability of an insura
 
 
 
-## 7. Building the model:
+## 7. Building the model and checking the accuracy:
 
 We have build the Random Forest classifier and used 9 features excluding policy_id and got the accuracy on training and testing data as below:
 ![alt text](image-11.png)
@@ -90,3 +90,5 @@ We have build the Random Forest classifier and used 9 features excluding policy_
 The pie-chart below shows the model's performance on <b>Actual Data Vs Predicted Data:</b>
 ![alt text](image-12.png)
 
+
+So, this is how we handle class imbalance problem, here we used Oversampling but depending on the situation, we can use Undersampling too.
