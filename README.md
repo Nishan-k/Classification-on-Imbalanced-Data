@@ -92,3 +92,4 @@ The pie-chart below shows the model's performance on <b>Actual Data Vs Predicted
 
 
 So, this is how we handle class imbalance problem, here we used Oversampling but depending on the situation, we can use Undersampling too.
+It is important in classification tasks to see the count of the target classes so there won't be any kind of bias and needs to be handled before training the model.
